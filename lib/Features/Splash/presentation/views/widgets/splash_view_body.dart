@@ -1,6 +1,9 @@
+import 'package:bookcade/Features/Home/data/presentation/views/home.dart';
+import 'package:bookcade/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../../../../core/utils/assets.dart';
+import '../../../../../../core/utils/assets.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -17,8 +20,13 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
   void initState() {
     super.initState();
     slidingAnimation();
+    homeNavigation();
   }
-
+  @override
+  void dispose() {
+    super.dispose();
+    animationController.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,5 +72,8 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
         Tween<Offset>(begin: const Offset(-2, 0), end: Offset.zero)
             .animate(animationController);
     animationController.forward();
+  }
+   void homeNavigation() {
+    Future.delayed(const Duration(seconds: 2),(){Get.to(()=> const HomeView(),transition: Transition.fade,duration: transtionsDuration);});
   }
 }
