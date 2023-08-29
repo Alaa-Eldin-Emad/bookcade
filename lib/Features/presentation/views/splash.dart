@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'widgets/splash_view_body.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
@@ -10,6 +11,6 @@ class SplashView extends StatefulWidget {
 class _SplashViewState extends State<SplashView> {
   @override
   Widget build(BuildContext context) {
-    return Column();
+    return const SplashViewBody();
   }
 }
