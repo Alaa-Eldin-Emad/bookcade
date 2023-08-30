@@ -2,7 +2,6 @@ import 'package:bookcade/Features/Home/data/presentation/views/home.dart';
 import 'package:bookcade/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 import '../../../../../../core/utils/assets.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -49,11 +48,10 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
               builder: (context, _) {
                 return SlideTransition(
                   position: leftSlidingAnimation,
-                  child: Text(
+                  child: const Text(
                     'Pages Unbound, Price Unfound',
                     textAlign: TextAlign.center,
-                    style: GoogleFonts.dmSerifDisplay(
-                        textStyle: const TextStyle(fontSize: 24)),
+                    style:  TextStyle(fontSize: 24),
                   ),
                 );
               }),

@@ -2,6 +2,7 @@ import 'package:bookcade/Features/Splash/presentation/views/splash.dart';
 import 'package:bookcade/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MainApp());
@@ -14,7 +15,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark().copyWith(scaffoldBackgroundColor: primaryColor),
+      theme: ThemeData.dark().copyWith(scaffoldBackgroundColor: primaryColor,textTheme:  GoogleFonts.dmSerifDisplayTextTheme(ThemeData.dark().textTheme)),
       navigatorKey: Get.key,
       home: const SplashView(),
     );
