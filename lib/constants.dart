@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
 
-const primaryColor = Color(0xff610000);
-const whiteRed =Color.fromARGB(255, 255, 183, 178);
-const transtionsDuration =Duration(milliseconds: 250);
+const primaryColor = Color(0xff1C0118);
+const whiteRed =Color.fromARGB(255, 190, 148, 184);
+const transtionsDuration =Duration(milliseconds: 750);
