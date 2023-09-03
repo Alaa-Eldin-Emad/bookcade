@@ -1,7 +1,7 @@
 import 'package:bookcade/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../../../../core/utils/style.dart';
+import '../../../../../core/utils/style.dart';
 import '../book_details.dart';
 import 'book_preview.dart';
 import 'book_rating.dart';

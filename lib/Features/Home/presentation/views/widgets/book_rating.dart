@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../../../../../constants.dart';
-import '../../../../../../core/utils/style.dart';
+import '../../../../../constants.dart';
+import '../../../../../core/utils/style.dart';
 
 class BookRating extends StatelessWidget {
   const BookRating({

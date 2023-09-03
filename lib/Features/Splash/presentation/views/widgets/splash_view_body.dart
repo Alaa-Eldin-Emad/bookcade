@@ -1,4 +1,4 @@
-import 'package:bookcade/Features/Home/data/presentation/views/home.dart';
+import 'package:bookcade/Features/Home/presentation/views/home.dart';
 import 'package:bookcade/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
