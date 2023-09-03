@@ -1,4 +1,7 @@
+import 'package:bookcade/Features/Search/presentation/views/search_view.dart';
+import 'package:bookcade/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'best_seller_list_view.dart';
 import 'books_list_view.dart';
 import 'custom_app_bar.dart';
@@ -17,7 +20,7 @@ class HomeViewBody extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           CustomAppBar(
-            iconOnPressed: () {},
+            iconOnPressed: () {Get.to(()=> const SearchView(),transition: Transition.fade,duration: transtionsDuration);},
           ),
           const BooksListView(),
           const Padding(

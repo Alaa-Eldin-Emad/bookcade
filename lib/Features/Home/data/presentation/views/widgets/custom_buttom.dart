@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class CustomDoubleButton extends StatelessWidget {
-  const CustomDoubleButton({
+class CustomButton extends StatelessWidget {
+  const CustomButton({
     super.key,
     required this.text,
     this.textColor,

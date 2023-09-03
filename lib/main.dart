@@ -1,4 +1,4 @@
-import 'package:bookcade/Features/Splash/presentation/views/splash.dart';
+import 'package:bookcade/Features/Splash/presentation/views/splash_view.dart';
 import 'package:bookcade/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
