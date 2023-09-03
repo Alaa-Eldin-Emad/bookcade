@@ -29,16 +29,17 @@ class BestSellerItem extends StatelessWidget {
                 aspectRatioHight: 6,
               ),
               SizedBox(
-                width: MediaQuery.of(context).size.width * .7,
-                child: const Padding(
-                  padding: EdgeInsets.fromLTRB(15, 20, 0, 20),
+                width: MediaQuery.of(context).size.width * .65,
+                child:  Padding(
+                  padding: const EdgeInsets.fromLTRB(15, 20, 0, 20),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      BookTitle(title: 'Game Of Thrones Chapter one'),
-                      WriterName(),
-                      Row(
+                      SizedBox(width: MediaQuery.of(context).size.width*.55,
+                        child: const BookTitle(title: 'Game Of Thrones Chapter one')),
+                      const WriterName(),
+                      const Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
          Text('Free', style: Style.text18),
