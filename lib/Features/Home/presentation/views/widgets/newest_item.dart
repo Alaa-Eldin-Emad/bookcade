@@ -24,7 +24,7 @@ class NewestItem extends StatelessWidget {
           height: 150,
           child: Row(
             children: [
-              BookPreview(
+              BookPreview(imageURL: 'https://m.media-amazon.com/images/M/MV5BN2IzYzBiOTQtNGZmMi00NDI5LTgxMzMtN2EzZjA1NjhlOGMxXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_FMjpg_UX1000_.jpg',
                 bookWidth: MediaQuery.of(context).size.width * .22,
                 aspectRatioHight: 6,
               ),

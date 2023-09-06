@@ -11,16 +11,17 @@ import 'package:google_fonts/google_fonts.dart';
 import 'core/utils/service_locator.dart';
 
 void main() {
-  runApp(const MainApp());
+  setupServiceLocator();
+  runApp(const BookCade());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class BookCade extends StatelessWidget {
+  const BookCade({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(providers: [
-      BlocProvider(create: (context) => FetchBooksCubit(getIt.get<HomeRepoImplementation>()),),
+      BlocProvider(create: (context) => FetchBooksCubit(getIt.get<HomeRepoImplementation>())..featchBooks(),),
       BlocProvider(create: (context) => FetchNewstBooksCubit(getIt.get<HomeRepoImplementation>()),)
     ],
       child: MaterialApp(

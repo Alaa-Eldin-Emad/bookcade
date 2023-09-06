@@ -23,11 +23,14 @@ class BooksListView extends StatelessWidget {
           child: SizedBox(
             height: listHight ?? MediaQuery.of(context).size.height * .37,
             child: ListView.builder(
+              physics: const BouncingScrollPhysics(),
               scrollDirection: Axis.horizontal,
-              itemCount: 10,
+              itemCount: state.books.length-1,
               itemBuilder: (context, index) {
                 return BookPreview(
                   bookWidth: bookWidth,
+                  imageURL: state.books[index].volumeInfo!.imageLinks!.thumbnail!
+                  // state.books[index].volumeInfo!.imageLinks!=null? state.books[index].volumeInfo!.imageLinks!.thumbnail!:'https://m.media-amazon.com/images/M/MV5BN2IzYzBiOTQtNGZmMi00NDI5LTgxMzMtN2EzZjA1NjhlOGMxXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_FMjpg_UX1000_.jpg',
                 );
               },
             ),

@@ -13,7 +13,7 @@ class BookDetailsSection extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 24),
-          child: BookPreview(
+          child: BookPreview(imageURL:'https://m.media-amazon.com/images/M/MV5BN2IzYzBiOTQtNGZmMi00NDI5LTgxMzMtN2EzZjA1NjhlOGMxXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_FMjpg_UX1000_.jpg' ,
               bookWidth: MediaQuery.of(context).size.width * .5,
               aspectRatioHight: 3),
         ),
