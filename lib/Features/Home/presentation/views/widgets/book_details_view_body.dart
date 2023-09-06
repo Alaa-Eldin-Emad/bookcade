@@ -2,7 +2,7 @@ import 'package:bookcade/constants.dart';
 import 'package:flutter/material.dart';
 import 'book_details_section.dart';
 import 'custom_app_bar.dart';
-import 'custom_buttom.dart';
+import '../../../../../core/widgets/custom_buttom.dart';
 import 'similar_books_section.dart';
 
 class BookDetailsViewBody extends StatelessWidget {

@@ -1,4 +1,4 @@
-import 'package:bookcade/Features/Home/presentation/views/widgets/best_seller_list_view.dart';
+import 'package:bookcade/Features/Home/presentation/views/widgets/newest_list_view.dart';
 import 'package:flutter/material.dart';
 import 'custom_search_field.dart';
 
@@ -14,7 +14,7 @@ class SearrchViewBody extends StatelessWidget {
             children: [
               Align(alignment: Alignment.topLeft, child: BackButton()),
               CustomSearchField(),
-              BestSellerListView(),
+              NewestListView(),
             ],
           ),
         ),

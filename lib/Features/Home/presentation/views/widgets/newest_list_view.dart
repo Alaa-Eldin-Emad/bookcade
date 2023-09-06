@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'best_seller_item.dart';
+import 'newest_item.dart';
 
-class BestSellerListView extends StatelessWidget {
-  const BestSellerListView({
+class NewestListView extends StatelessWidget {
+  const NewestListView({
     super.key,
   });
 
@@ -14,7 +14,7 @@ class BestSellerListView extends StatelessWidget {
       padding: EdgeInsets.zero,
       itemCount: 10,
       itemBuilder: (context, index) {
-      return const BestSellerItem();
+      return const NewestItem();
     },            
     );
   }

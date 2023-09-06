@@ -2,7 +2,7 @@ import 'package:bookcade/Features/Search/presentation/views/search_view.dart';
 import 'package:bookcade/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'best_seller_list_view.dart';
+import 'newest_list_view.dart';
 import 'books_list_view.dart';
 import 'custom_app_bar.dart';
 
@@ -27,7 +27,7 @@ class HomeViewBody extends StatelessWidget {
             padding:  EdgeInsets.only(top: 20,left: 10,bottom: 10),
             child: Text('Best seller',textAlign: TextAlign.left,style: TextStyle(fontSize: 24),),
           ),
-          const BestSellerListView(),
+          const NewestListView(),
         ],
       ),
     ),],),

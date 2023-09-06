@@ -8,8 +8,8 @@ import 'book_rating.dart';
 import 'book_title.dart';
 import 'writer_name.dart';
 
-class BestSellerItem extends StatelessWidget {
-  const BestSellerItem({
+class NewestItem extends StatelessWidget {
+  const NewestItem({
     super.key,
   });
 
