@@ -1,3 +1,4 @@
+import 'package:bookcade/Features/Home/data/model/book_model/book_model.dart';
 import 'package:bookcade/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -10,8 +11,9 @@ import 'writer_name.dart';
 
 class NewestItem extends StatelessWidget {
   const NewestItem({
-    super.key,
+    super.key, required this.bookModel, 
   });
+  final BookModel bookModel;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +26,7 @@ class NewestItem extends StatelessWidget {
           height: 150,
           child: Row(
             children: [
-              BookPreview(imageURL: 'https://m.media-amazon.com/images/M/MV5BN2IzYzBiOTQtNGZmMi00NDI5LTgxMzMtN2EzZjA1NjhlOGMxXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_FMjpg_UX1000_.jpg',
+              BookPreview(imageURL:bookModel.volumeInfo!.imageLinks?.thumbnail??'https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png',
                 bookWidth: MediaQuery.of(context).size.width * .22,
                 aspectRatioHight: 6,
               ),
@@ -37,14 +39,14 @@ class NewestItem extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       SizedBox(width: MediaQuery.of(context).size.width*.55,
-                        child: const BookTitle(title: 'Game Of Thrones Chapter one')),
-                      const WriterName(),
-                      const Row(
+                        child:  BookTitle(title: bookModel.volumeInfo!.title!)),
+                       WriterName(authorName: bookModel.volumeInfo!.authors!=null?bookModel.volumeInfo!.authors!.first:"Without author Name"),
+                       Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-         Text('Free', style: Style.text18),
-         Spacer(),
-                      BookRating(),
+         const Text('Free', style: Style.text18),
+         const Spacer(),
+                      BookRating(avaregeRating: bookModel.volumeInfo!.maturityRating!,ratingCount:10 ),
                       ],
                   ),
                     ],

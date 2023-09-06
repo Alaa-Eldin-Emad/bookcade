@@ -13,7 +13,7 @@ class HomeRepoImplementation extends HomeRepo {
     try {
       var data = await api.getData(
           endPoint:
-              'volumes?Filtering=free-ebooks&Sorting=newest&q=subject:Programming');
+              'volumes?q=flowers&orderBy=newest');
       List<BookModel> books = [];
       for (var item in data['items']) {
         books.add(BookModel.fromJson(item));

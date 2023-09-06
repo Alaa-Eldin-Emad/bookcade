@@ -4,9 +4,10 @@ import '../../../../../core/utils/style.dart';
 
 class BookRating extends StatelessWidget {
   const BookRating({
-    super.key,
+    super.key, required this.avaregeRating, required this.ratingCount,
   });
-
+  final String avaregeRating;
+  final int ratingCount;
   @override
   Widget build(BuildContext context) {
     return Row(mainAxisAlignment:MainAxisAlignment.center,
@@ -16,10 +17,10 @@ class BookRating extends StatelessWidget {
           color: Colors.amber,
           size: 20,
         ),
-        const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 5),
+         Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 5),
           child: Text(
-            '5.0',
+            avaregeRating,
             style: Style.text16,
           ),
         ),

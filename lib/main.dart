@@ -22,7 +22,7 @@ class BookCade extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(providers: [
       BlocProvider(create: (context) => FetchBooksCubit(getIt.get<HomeRepoImplementation>())..featchBooks(),),
-      BlocProvider(create: (context) => FetchNewstBooksCubit(getIt.get<HomeRepoImplementation>()),)
+      BlocProvider(create: (context) => FetchNewstBooksCubit(getIt.get<HomeRepoImplementation>())..featchNewestBooks(),)
     ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

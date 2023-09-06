@@ -23,9 +23,10 @@ class BookDetailsSection extends StatelessWidget {
         ),
         const Padding(
           padding: EdgeInsets.only(top: 5, bottom: 10),
-          child: WriterName(fontSize: 20),
+          child: Text('')
+          //WriterName(fontSize: 20),
         ),
-        const BookRating(),
+         //BookRating(avaregeRating: ),
       ],
     );
   }

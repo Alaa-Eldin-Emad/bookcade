@@ -29,8 +29,7 @@ class BooksListView extends StatelessWidget {
               itemBuilder: (context, index) {
                 return BookPreview(
                   bookWidth: bookWidth,
-                  imageURL: state.books[index].volumeInfo!.imageLinks!.thumbnail!
-                  // state.books[index].volumeInfo!.imageLinks!=null? state.books[index].volumeInfo!.imageLinks!.thumbnail!:'https://m.media-amazon.com/images/M/MV5BN2IzYzBiOTQtNGZmMi00NDI5LTgxMzMtN2EzZjA1NjhlOGMxXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_FMjpg_UX1000_.jpg',
+                  imageURL: state.books[index].volumeInfo!.imageLinks?.thumbnail??'https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png'
                 );
               },
             ),
