@@ -5,7 +5,6 @@ import 'package:get/get.dart';
 import '../../../../../core/utils/style.dart';
 import '../book_details.dart';
 import 'book_preview.dart';
-import 'book_rating.dart';
 import 'book_title.dart';
 import 'writer_name.dart';
 
@@ -20,7 +19,7 @@ class NewestItem extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 10),
       child: GestureDetector(
-        onTap: () => Get.to(() => const BookDetailsView(),
+        onTap: () => Get.to(() =>  BookDetailsView(bookModel: bookModel),
             transition: Transition.fade, duration: transtionsDuration),
         child: SizedBox(
           height: 150,
@@ -33,22 +32,16 @@ class NewestItem extends StatelessWidget {
               SizedBox(
                 width: MediaQuery.of(context).size.width * .65,
                 child:  Padding(
-                  padding: const EdgeInsets.fromLTRB(15, 20, 0, 20),
+                  padding: const EdgeInsets.fromLTRB(15, 30, 0, 5),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       SizedBox(width: MediaQuery.of(context).size.width*.55,
                         child:  BookTitle(title: bookModel.volumeInfo!.title!)),
+                        const SizedBox(height: 5,),
                        WriterName(authorName: bookModel.volumeInfo!.authors!=null?bookModel.volumeInfo!.authors!.first:"Without author Name"),
-                       Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-         const Text('Free', style: Style.text18),
-         const Spacer(),
-                      BookRating(avaregeRating: bookModel.volumeInfo!.maturityRating!,ratingCount:10 ),
-                      ],
-                  ),
+                       const SizedBox(height: 5,),
+                       const Text('Free', style: Style.text18,),
                     ],
                   ),
                 ),

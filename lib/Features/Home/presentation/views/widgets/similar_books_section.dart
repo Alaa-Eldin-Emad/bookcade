@@ -1,15 +1,14 @@
+import 'package:bookcade/Features/Home/presentation/views/widgets/similar_books_list_view.dart';
 import 'package:flutter/material.dart';
 import '../../../../../core/utils/style.dart';
-import 'books_list_view.dart';
 
 class SimilarBooksSection extends StatelessWidget {
-  const SimilarBooksSection({super.key});
-
+  const SimilarBooksSection({super.key,});
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return  const Column(
       children: [
-        const Align(
+          Align(
             alignment: Alignment.centerLeft,
             child: Text(
               'You Can also like',
@@ -17,9 +16,7 @@ class SimilarBooksSection extends StatelessWidget {
             )),
         Align(
           alignment: Alignment.bottomCenter,
-          child: BooksListView(
-            listHight: MediaQuery.of(context).size.height * .2,
-            bookWidth: MediaQuery.of(context).size.width * .25,
+          child: SimilarBooksListView(
           ),
         ),
       ],

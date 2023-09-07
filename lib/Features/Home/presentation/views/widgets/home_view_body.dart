@@ -8,9 +8,9 @@ import 'custom_app_bar.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({
-    super.key,
+    super.key, 
   });
-
+  
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -22,7 +22,7 @@ class HomeViewBody extends StatelessWidget {
           CustomAppBar(
             iconOnPressed: () {Get.to(()=> const SearchView(),transition: Transition.fade,duration: transtionsDuration);},
           ),
-          const BooksListView(),
+           const BooksListView(),
           const Padding(
             padding:  EdgeInsets.only(top: 20,left: 10,bottom: 10),
             child: Text('Newest Books',textAlign: TextAlign.left,style: TextStyle(fontSize: 24),),

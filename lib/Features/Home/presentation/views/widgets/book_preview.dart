@@ -1,3 +1,4 @@
+import 'package:bookcade/Features/Home/data/model/book_model/book_model.dart';
 import 'package:bookcade/Features/Home/presentation/views/book_details.dart';
 import 'package:bookcade/constants.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -8,17 +9,18 @@ class BookPreview extends StatelessWidget {
   const BookPreview({
     super.key,
     this.bookWidth,
-    this.aspectRatioHight, required this.imageURL,
+    this.aspectRatioHight, required this.imageURL, this.bookModel,
   });
   final double? bookWidth;
   final double? aspectRatioHight;
   final String imageURL;
+  final BookModel? bookModel;
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 6),
       child: GestureDetector(
-        onTap: () => Get.to(() => const BookDetailsView(),
+        onTap: () => Get.to(() =>  BookDetailsView(bookModel: bookModel!),
             transition: Transition.fade, duration: transtionsDuration),
         child: SizedBox(
           width: bookWidth ?? MediaQuery.of(context).size.width * .45,
@@ -36,7 +38,8 @@ class BookPreview extends StatelessWidget {
       ),
     ),
           ),
-        ),
+        // ),
+    ),
     );
   }
 }
