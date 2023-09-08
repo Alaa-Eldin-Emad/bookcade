@@ -25,7 +25,7 @@ class NewestItem extends StatelessWidget {
           height: 150,
           child: Row(
             children: [
-              BookPreview(imageURL:bookModel.volumeInfo!.imageLinks?.thumbnail??'https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png',
+              BookPreview(imageURL:bookModel.volumeInfo!.imageLinks?.thumbnail??'https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png',bookModel: bookModel,
                 bookWidth: MediaQuery.of(context).size.width * .22,
                 aspectRatioHight: 6,
               ),

@@ -10,9 +10,12 @@ class SimilarBooksSection extends StatelessWidget {
       children: [
           Align(
             alignment: Alignment.centerLeft,
-            child: Text(
-              'You Can also like',
-              style: Style.text16,
+            child: Padding(
+              padding: EdgeInsets.only(left: 10),
+              child: Text(
+                'You Can also like',
+                style: Style.text16,
+              ),
             )),
         Align(
           alignment: Alignment.bottomCenter,
