@@ -10,9 +10,11 @@ class BookTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Text(title,textAlign: textAlign,
-        style:  TextStyle(fontSize: fontSize?? 20),
-        maxLines: 2,
-        overflow: TextOverflow.ellipsis);
+    return Text(title,textAlign: textAlign,
+            style:  TextStyle(fontSize: fontSize?? 20),
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis);
+      
+    
   }
 }

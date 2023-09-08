@@ -1,8 +1,8 @@
 import 'package:bookcade/Features/Home/presentation/view_models/featured_books_cubit/fetch_books_cubit.dart';
 import 'package:bookcade/core/widgets/custom_error_msg.dart';
+import 'package:bookcade/core/widgets/loading_indicator/general_loading_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../../../core/widgets/custom_loading_indicator.dart';
 import 'book_preview.dart';
 
 class BooksListView extends StatelessWidget {
@@ -35,8 +35,9 @@ class BooksListView extends StatelessWidget {
           ),
         );
       } else if (state is FetchBooksFailure) {
-        return CustomErrorMsg(errorMsg: state.errorMsg);
-      } else {
+        return CustomErrorMsg(errorMsg:  state.errorMsg);
+      } 
+      else {
         return const LoadingIndicator();
       }
     });

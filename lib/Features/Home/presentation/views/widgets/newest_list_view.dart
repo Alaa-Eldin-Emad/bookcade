@@ -1,6 +1,6 @@
 import 'package:bookcade/Features/Home/presentation/view_models/newest_books_cubit/fetch_newst_books_cubit.dart';
 import 'package:bookcade/core/widgets/custom_error_msg.dart';
-import 'package:bookcade/core/widgets/custom_loading_indicator.dart';
+import 'package:bookcade/core/widgets/loading_indicator/list_loading_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'newest_item.dart';
@@ -15,6 +15,7 @@ class NewestListView extends StatelessWidget {
     return BlocBuilder<FetchNewstBooksCubit, FetchNewstBooksState>(
       builder: (context, state) {
         if (state is FetchNewstBooksSucsses) {
+          FetchNewstBooksCubit.get(context).loading=false;
   return ListView.builder(
     shrinkWrap: true,
     physics: const NeverScrollableScrollPhysics(),
@@ -29,7 +30,7 @@ else if (state is FetchNewstBooksFailure){
   return CustomErrorMsg(errorMsg: state.errorMsg);
 }
 else {
-  return const LoadingIndicator();
+  return const ListLoadingIndicator();
 }
       },
     );

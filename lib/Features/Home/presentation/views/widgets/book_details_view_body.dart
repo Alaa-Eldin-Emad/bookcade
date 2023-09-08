@@ -54,7 +54,7 @@ class _BookDetailsViewBodyState extends State<BookDetailsViewBody> {
                           context, widget.bookModel.volumeInfo!.previewLink);
                     },
                     buttomColor: whiteRed,
-                    text: 'Preveiw',
+                    text: previewAvilablity(widget.bookModel),
                     borderRadius: const BorderRadius.only(
                         topRight: Radius.circular(12),
                         bottomRight: Radius.circular(12)),
@@ -67,5 +67,12 @@ class _BookDetailsViewBodyState extends State<BookDetailsViewBody> {
         ),
       ),
     );
+  }
+   String previewAvilablity(BookModel bookModel) {
+    if (bookModel.volumeInfo!.previewLink == null) {
+      return 'Not Avaliable';
+    } else {
+      return 'Preview';
+    }
   }
 }

@@ -2,7 +2,7 @@ import 'package:bookcade/Features/Home/presentation/view_models/similar_books/fe
 import 'package:bookcade/core/widgets/custom_error_msg.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../../../core/widgets/custom_loading_indicator.dart';
+import '../../../../../core/widgets/loading_indicator/general_loading_indicator.dart';
 import 'book_preview.dart';
 
 class SimilarBooksListView extends StatefulWidget {
@@ -43,7 +43,7 @@ class _SimilarBooksListViewState extends State<SimilarBooksListView> {
           return CustomErrorMsg(errorMsg: state.errorMsg);
         }
         else {
-          return const LoadingIndicator();
+          return  LoadingIndicator(bookWidth:MediaQuery.of(context).size.width * .25,height:MediaQuery.of(context).size.height * .24 ,);
         }
       }
     );
