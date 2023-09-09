@@ -30,7 +30,7 @@ class _SimilarBooksListViewState extends State<SimilarBooksListView> {
               scrollDirection: Axis.horizontal,
               itemCount: state.books.length,
               itemBuilder: (context, index) {
-                return BookPreview(
+                return BookPreview(bookModel: state.books[index],
                   bookWidth: MediaQuery.of(context).size.width * .25,
                   imageURL: state.books[index].volumeInfo!.imageLinks?.thumbnail??'https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png'
                 );
