@@ -1,27 +1,29 @@
-import 'package:bookcade/Features/Home/data/model/book_model/book_model.dart';
+import 'package:bookcade/core/model/book_model/book_model.dart';
 import 'package:bookcade/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../../../core/utils/style.dart';
-import '../book_details.dart';
-import 'book_preview.dart';
-import 'book_title.dart';
-import 'writer_name.dart';
+import '../utils/style.dart';
+import '../../Features/Home/presentation/views/book_details.dart';
+import '../../Features/Home/presentation/views/widgets/book_preview.dart';
+import '../../Features/Home/presentation/views/widgets/book_title.dart';
+import '../../Features/Home/presentation/views/widgets/writer_name.dart';
 
-class NewestItem extends StatelessWidget {
-  const NewestItem({
+class BookItem extends StatelessWidget {
+  const BookItem({
     super.key,
-    required this.bookModel,
+    required this.bookModel, this.disposeController,
   });
   final BookModel bookModel;
-
+  final void Function()? disposeController;
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 10),
       child: GestureDetector(
-        onTap: () => Get.to(() => BookDetailsView(bookModel: bookModel),
-            transition: Transition.fade, duration: transtionsDuration),
+        onTap: () { Get.to(() => BookDetailsView(bookModel: bookModel),
+            transition: Transition.fade, duration: transtionsDuration);
+            disposeController;
+        },
         child: SizedBox(
           height: 150,
           child: Row(
@@ -36,9 +38,9 @@ class NewestItem extends StatelessWidget {
               SizedBox(
                 width: MediaQuery.of(context).size.width * .65,
                 child: Padding(
-                  padding: const EdgeInsets.fromLTRB(15, 30, 0, 5),
+                  padding: const EdgeInsets.fromLTRB(15, 0, 0, 5),
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start, mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       SizedBox(
                         width: MediaQuery.of(context).size.width * .55,

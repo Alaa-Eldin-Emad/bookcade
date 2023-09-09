@@ -1,4 +1,4 @@
-import 'package:bookcade/Features/Home/data/model/book_model/book_model.dart';
+import 'package:bookcade/core/model/book_model/book_model.dart';
 import 'package:bookcade/Features/Home/presentation/view_models/similar_books/fetch_similar_books_cubit.dart';
 import 'package:bookcade/constants.dart';
 import 'package:bookcade/core/utils/functions/url_luncher.dart';

@@ -1,4 +1,4 @@
-import 'package:bookcade/Features/Home/data/model/book_model/book_model.dart';
+import 'package:bookcade/core/model/book_model/book_model.dart';
 import 'package:flutter/material.dart';
 import 'book_preview.dart';
 import 'book_title.dart';

@@ -1,4 +1,4 @@
-import 'package:bookcade/Features/Home/data/model/book_model/book_model.dart';
+import 'package:bookcade/core/model/book_model/book_model.dart';
 import 'package:bookcade/Features/Home/data/repositories/home_repository.dart';
 import 'package:bookcade/core/errors/failures.dart';
 import 'package:dartz/dartz.dart';
@@ -13,7 +13,7 @@ class HomeRepoImplementation extends HomeRepo {
     try {
       var data = await api.getData(
           endPoint:
-              'volumes?q=money&Sorting=newest&Filtering=free-ebooks');
+              'volumes?q=fire&Sorting=newest&Filtering=free-ebooks');
       List<BookModel> books = [];
       for (var item in data['items']) {
         books.add(BookModel.fromJson(item));
@@ -31,7 +31,7 @@ class HomeRepoImplementation extends HomeRepo {
   Future<Either<Failures, List<BookModel>>> fetchBooks() async {
     try {
       var data = await api.getData(
-          endPoint: 'volumes?Filtering=free-ebooks&q=subject:Programming');
+          endPoint: 'volumes?Filtering=free-ebooks&q=science');
       List<BookModel> books = [];
       for (var item in data['items']) {
         books.add(BookModel.fromJson(item));

@@ -3,7 +3,7 @@ import 'package:bookcade/core/widgets/custom_error_msg.dart';
 import 'package:bookcade/core/widgets/loading_indicator/list_loading_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'newest_item.dart';
+import '../../../../../core/widgets/book_item.dart';
 
 class NewestListView extends StatelessWidget {
   const NewestListView({
@@ -22,7 +22,7 @@ class NewestListView extends StatelessWidget {
     padding: EdgeInsets.zero,
     itemCount: state.books.length,
     itemBuilder: (context, index) {
-      return  NewestItem(bookModel: state.books[index],);
+      return  BookItem(bookModel: state.books[index],);
     },
   );
 }

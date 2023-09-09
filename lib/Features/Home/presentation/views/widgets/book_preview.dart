@@ -1,4 +1,4 @@
-import 'package:bookcade/Features/Home/data/model/book_model/book_model.dart';
+import 'package:bookcade/core/model/book_model/book_model.dart';
 import 'package:bookcade/Features/Home/presentation/views/book_details.dart';
 import 'package:bookcade/constants.dart';
 import 'package:cached_network_image/cached_network_image.dart';

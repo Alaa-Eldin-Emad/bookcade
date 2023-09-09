@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:bookcade/Features/Home/data/model/book_model/book_model.dart';
+import 'package:bookcade/core/model/book_model/book_model.dart';
 import 'package:bookcade/Features/Home/data/repositories/home_repository.dart';
 import 'package:equatable/equatable.dart';
 part 'fetch_similar_books_state.dart';

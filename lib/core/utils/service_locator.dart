@@ -1,4 +1,5 @@
 import 'package:bookcade/Features/Home/data/repositories/home_repo_implementation.dart';
+import 'package:bookcade/Features/Search/data/repositories/search_repo_implementation.dart';
 import 'package:bookcade/core/API/api.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
@@ -10,4 +11,6 @@ void setupServiceLocator() {
   getIt.registerSingleton<HomeRepoImplementation>(HomeRepoImplementation(
     getIt.get<API>(),
   ));
+  getIt.registerSingleton<SearchRepoImplementation>(SearchRepoImplementation(
+    getIt.get<API>(),),);
 }
